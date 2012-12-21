@@ -1,0 +1,94 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{amssymb, graphicx, fancyhdr, multirow, tikz}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage[utf8]{inputenc}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{12pt}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\def\typeofdoc{Laborationsrapport}
+\def\email{togald.nilsson@gmail.com}
+
+\def\name{Togald Nilsson}
+\def\university{Uppsala universitet}
+\def\inst{Fysik och astronomi}
+\def\course{Elektromagnetism 1}
+\def\title{Laboration 3\\Magnetiska fält}
+\def\group{ES2A}
+\def\labdate{6 december 2012}
+\def\semester{P2 HT2012}
+\def\partner{Martin Roth}
+\def\mentor{David Hansson}
+
+\def\firstret{}
+\def\secondret{}
+\def\thirdret{}
+\def\fourthret{}
+\def\fifthret{}
+
+\lhead{Institutionen för \inst, \university \\ \typeofdoc}
+\rhead{\name \\ \today}
+\chead{}
+\lfoot{}
+\rfoot{Powered by \LaTeX @Arch Linux}
+
+\begin{document}
+
+\begin{titlepage}
+	\thispagestyle{empty}
+	\begin{large}
+		\begin{tabular}{@{}p{\textwidth}@{}}
+			\textbf{\university \hfill \today} \\
+			\textbf{Institutionen för \inst} \\
+			\textbf{\typeofdoc} \\
+		\end{tabular}
+	\end{large}
+	\vspace{10mm}
+	\begin{center}
+		\huge{\textbf{\course}}\\
+		\vspace{10mm}
+		\LARGE{\title} \\
+		\vspace{15mm}
+		\begin{large}
+			\begin{tabular}{rl}
+				\textbf{Namn} & \name \\[3mm]
+				\textbf{E-mail} & {\tt \email} \\[3mm]
+				\textbf{Grupp} & \group \\[3mm]
+				\textbf{Laborationsdatum} & \labdate \\[3mm]
+				\textbf{Period och studieår} & \semester \\[3mm]
+				%\textbf{Laborationspartner} & \partner \\[3mm]
+				\textbf{Laborationshandledare} & \mentor \\[3mm]
+				
+			\end{tabular}
+		\end{large}
+		\vfill
+		\begin{small}
+		\begin{tabular}{||p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}||}\hline
+			\begin{tiny} datum för 1:a retur\end{tiny} \firstret &
+			\begin{tiny} datum för 2:a retur\end{tiny} \secondret &
+			\begin{tiny} datum för 3:e retur\end{tiny} \thirdret &
+			\begin{tiny} datum för 4:e retur\end{tiny} \fourthret &
+			\begin{tiny} datum för 5:e retur\end{tiny} \fifthret \\[7mm] \hline
+			\multicolumn{2}{||p{40mm}|}{\begin{tiny} Godkännanderuta\end{tiny}}  &
+			\tiny{\begin{tiny} Godkännandedatum\end{tiny}} &
+			\multicolumn{2}{|p{40mm}||}{\begin{tiny} Godkännandesignatur\end{tiny}} \\[7mm] \hline
+		\end{tabular}
+		\end{small}
+	\end{center}
+\end{titlepage}
+
+\pagebreak
+\tableofcontents\pagebreak
+
+\section{Sammanfattning}
+\[ \vec{dB}=\frac{\mu_0}{4\pi}\cdot \frac{I\cdot \vec{dS}\times \vec{r}}{r^3} \]
+
+För z-axeln: 
+
+\[ \vec{dB}=\frac{\mu_0}{4\pi}\cdot \frac{2IA}{r^3} \]
+
+\end{document}
