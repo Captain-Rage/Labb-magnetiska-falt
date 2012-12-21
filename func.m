@@ -15,7 +15,7 @@
 % been warned. 
 % 
 
-clear all;
+clear all;	% Innan start kan det vara en bra idé att rensa samtliga variabler. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
@@ -30,11 +30,23 @@ N=130;		% Spolens antal lindningar
 mVtoGauss=1/4.92;	% Faktor för omvandling mellan mV och Gauss
 
 % Parametrar för teoretiska beräkningar
-xstep=0.00005;
-zstep=0.00005;
+xstep=0.0005;
+zstep=0.0005;
 xt=[0:xstep:0.2];
 y=0;
 zt=[-0.2:zstep:0.5];
+
+% This section is problematic, so to speak...
+%  
+%  P=[0,0,1];
+%  vn=100;
+%  dv=(2*pi)/vn;
+%  v=dv*[1:vn]';
+%  d=[P(1)-r*cos(v),P(2)-r*sin(v),P(3)*ones(vn,1)];
+%  ds=dv*[-r*sin(v),r*cos(v),zeros(vn,1)];
+%  dB=I.*cross(ds,d)./norm(d)^3;
+%  B=(10^-3)*sum(dB);
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
@@ -43,7 +55,7 @@ zt=[-0.2:zstep:0.5];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Numeriskt längs z-axeln
-%dBzn=10^-3*
+
 
 % Analytiskt längs z-axeln
 A=(r^2)*pi;			% Spolens area, m^2
@@ -56,9 +68,9 @@ zm=[-0.20:0.02:0.50];
 Bzm=mVtoGauss.*[7.1 8.7 10.7 13.0 15.8 18.8 20 24.4 26.3 27 26.3 25.5 22.8 19.7 16.6 13.7 11.4 9.3 7.7 6.3 5.1 4.2 3.5 2.8 2.4 1.9 1.6 1.3 1.1 1 0.8 0.6 0.5 0.3 0.2 0.1];
 
 % Plot längs z-axeln
-z-Bz-plot=plot(zm,Bzm,'k',zt,Bza,'g');
+plot(zm,Bzm,'k',zt,Bza,'g');
 xlabel('Distance from the solenoid center, meters');
-ylabel('Magnetic field strength, Gauss [1 Gauss = Tesla*10^-4]');
+ylabel('Magnetic field strength, Gauss [1 Gauss = Tesla*10^-^4]');
 title('Magnetic field strength along the z axis');
 legend('Measured values','Analytically calculated values','Location','NorthEast');
 
